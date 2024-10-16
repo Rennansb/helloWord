@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Olá Mundo'),
+      home: const MyHomePage(title: 'Hello Word'),
     );
   }
 }
@@ -34,38 +34,39 @@ class _MyHomePageState extends State<MyHomePage> {
 
   void _incrementCounter() {
     setState(() {
-     
-        _counter++;
-       
+      _counter++;
     });
   }
 
   void _decrementCounter() {
     setState(() {
-     
-        _counter--;
-       
+      _counter--;
     });
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black26,
       appBar: AppBar(
         title: Text(widget.title),
+        centerTitle: true,
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             const Text(
-              'You have pushed the button this many times:',
+              'Faça Contagem dos Hello Words',
+              style: TextStyle(fontSize: 20),
+            ),
+            const SizedBox(
+              height: 10,
             ),
             Text(
               _counter > 10 || _counter < 0 ? '$_menssage,' : '$_counter',
-              style: Theme.of(context).textTheme.headline4,
+              style: const TextStyle(fontSize: 50, fontWeight: FontWeight.bold),
             ),
-            
           ],
         ),
       ),
